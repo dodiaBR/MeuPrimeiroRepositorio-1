@@ -10,11 +10,13 @@ public class NextLevelUniversity {
 		System.out.println("\t---Next Level---");
 		System.out.println("\t================");
 		
-		System.out.println("\n  Calculo de sua média Bimestral");
+		System.out.println("\n  Calculo de sua média do Semestre");
 		System.out.println("  ------------------------------");
 		
 		System.out.print("\nDigite seu nome: ");
 		String nome = ler.nextLine();
+		
+		System.out.println("\n  Notas do 1o Bimestre");
 		
 		System.out.print("\nInsira a nota da sua prova (peso 3): ");
 		double prova  = ler.nextDouble()*3; // ja multipliquei os pesos das provas nos inputs, é correto?
@@ -44,21 +46,61 @@ public class NextLevelUniversity {
 			contribuicao = ler.nextDouble()*3;
 		}
 		
-		System.out.println("\nA nota minima para aprovacao no bimestre é 8.");
+		double mediaBimestre1 = (prova+projeto+listaExercicios+contribuicao)/11;
+		
+		System.out.printf("\nSua média do 1o Bimestre foi: %.2f",mediaBimestre1);
+		System.out.printf("\n----------------------------------\n");
+		
+		System.out.println("\n  Notas do 2o Bimestre");
+		
+		System.out.print("\nInsira a nota da sua prova (peso 3): ");
+		double prova2  = ler.nextDouble()*3; // ja multipliquei os pesos das provas nos inputs, é correto?
+		while (prova2 < 0 || prova2 > 30) { // aqui eu tentei fazer um programa que só aceite valores de 0 a 10 desculpa se ta confuso ;-)
+			System.out.print("Valor Inválido, digite um numero de 0 a 10: \n");
+			prova2 = ler.nextDouble()*3;
+		}
+		
+		System.out.print("Insira a nota do seu projeto (peso 3): ");
+		double projeto2  = ler.nextDouble()*3;
+		while (projeto2 < 0 || projeto2 > 30) {// aqui eu tentei fazer um programa que só aceite valores de 0 a 10 desculpa se ta confuso ;-)
+			System.out.print("Valor Inválido, digite um numero de 0 a 10: \n");
+			projeto2 = ler.nextDouble()*3;
+		}
+		
+		System.out.print("Insira a nota da sua lista de exercícios (peso 2): ");
+		double listaExercicios2  = ler.nextDouble()*2;
+		while (listaExercicios2 < 0 || listaExercicios2 > 20) {// aqui eu tentei fazer um programa que só aceite valores de 0 a 10 desculpa se ta confuso ;-)
+			System.out.print("Valor Inválido, digite um numero de 0 a 10: \n");
+			listaExercicios2 = ler.nextDouble()*2;
+		}
+		
+		System.out.print("Insira a nota da sua contribuição aos projetos de software livre (peso 3): ");
+		double contribuicao2  = ler.nextDouble()*3;
+		while (contribuicao2 < 0 ||contribuicao2 > 30) {// aqui eu tentei fazer um programa que só aceite valores de 0 a 10 desculpa se ta confuso ;-)
+			System.out.print("Valor Inválido, digite um numero de 0 a 10: \n");
+			contribuicao2 = ler.nextDouble()*3;
+		}
+		
+		double mediaBimestre2 = (prova2+projeto2+listaExercicios2+contribuicao2)/11;
+		
+		System.out.printf("\nSua média do 2o Bimestre foi: %.2f",mediaBimestre2);
+		System.out.printf("\n----------------------------------\n");
+		
+		System.out.println("\nA nota minima para aprovacao no Semestre é 8.");
 				
-		double media = (prova+projeto+listaExercicios+contribuicao)/11;
-		double provaFinal = 10 - media;
+		double mediaSemestre = (mediaBimestre1 + mediaBimestre2)/2;
+		double provaFinal = 10 - mediaSemestre;
 		double recuperacao;
 		
-		if (media >= 8){
-			System.out.printf("\nParabéns "+nome+", sua média bimestral foi: %.2f e você foi APROVADO",media);
+		if (mediaSemestre >= 8){
+			System.out.printf("\nParabéns "+nome+", sua média semestral foi: %.2f e você foi APROVADO",mediaSemestre);
 			System.out.println("\n"); // aqui minha duvida, coloquei essas linhas aqui pois caso aprovado nesse if o programa nao imprime as linhas la embaixo
 			System.out.println("\t================");
 			System.out.println("\t---Next Level---");
 			System.out.println("\t================");
 			
 		}else{
-			System.out.printf("\n"+nome+" sua média foi: %.2f e voce está de recuperação.",media);
+			System.out.printf("\n"+nome+" sua média semestral foi: %.2f e voce está de recuperação.",mediaSemestre);
 			System.out.printf("\nVocê precisa de uma nota mínima de %.2f na prova final, boa sorte!\n",provaFinal);
 			System.out.print("\nInsira a nota de sua prova final: ");
 		}
