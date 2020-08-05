@@ -130,6 +130,8 @@ public class NextLevelUniversity {
 }
 
 /*
+Enunciado 
+
 A Next Level, uma moderna e conceituada universidade, necessita de um sistema de gestão acadêmico.
 
 Para o projeto piloto de implantação do sistema, você deve criar um programa que permita calcular a 
@@ -145,7 +147,7 @@ Os dados devem ser obtidos a partir de input pelo teclado e o programa deve exib
 aprovado ou reprovado. Considere que o aluno deve ser aprovado se obtiver nota igual ou maior que 8.
 
 Caso o aluno tenha média menor que 8, determine também a nota mínima necessária para a pontuação na 
-prova final, de forma que o aluno garanta aprovação na disciplina. Para tal, basta subtrair do valor 
+prova final, de forma que o aluno garanta aprovação na disciplina. Para isso, basta subtrair do valor 
 10,00 o valor da média.
 
 Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto 
