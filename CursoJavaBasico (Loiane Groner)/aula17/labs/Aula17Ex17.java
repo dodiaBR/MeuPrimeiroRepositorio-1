@@ -12,21 +12,14 @@ public class Aula17Ex17 {
 		int res=1;
 		int cont=1;
 		
-		//for (int i=n;i>0;i--) {	
-			//for ()
-		//	res*=i;
-			//n--;
+			
 		
+		do {				
+			res*= n;
+			n = n-1;				
+			System.out.println(res);
+		}while (n>1);
 		
-			do {
-				
-				
-				res*= n;
-				n = n-1;
-				
-				System.out.println(res);
-			}while (n>1);
-		//}
 		
 		
 		

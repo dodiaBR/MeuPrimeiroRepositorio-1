@@ -3,29 +3,26 @@ import java.util.Scanner;
 
 public class Aula17Ex18 {
 		
-		public static void main (String[]args) {
+	public static void main (String[]args) {
 			
-			Scanner ler = new Scanner(System.in);
-			int n = ler.nextInt();
-			double div;
-			double resto;
-			int cont=1;
-			int primo=0;
-			double somaR=0;
-			for (div=1;div<n;div++) {
-				resto = n%div;
-				somaR = somaR + resto;
-				System.out.println();
-				System.out.println(somaR);
-				
-				// TUDO ERRADO ahhhhhhhhhhhhhhhh
-				
+		Scanner ler = new Scanner(System.in);
+						
+		System.out.println("Insira um numo para saber se ele é um número primo: ");
+		int num = ler.nextInt();
 			
+		boolean primo = true;
+			
+		for (int i=2; i<num ;i++) {
+			if (num % i == 0) {
+				System.out.println("Não é um numero primo - divisivel por "+i);
+				primo = false;
 			}
-				
-			
-			
 		}
+			
+		if(primo) {
+			System.out.println("É um número primo.");
+		}
+	}
 }
 
 
