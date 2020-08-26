@@ -12,13 +12,14 @@ public class Aula17Ex26 {
 		System.out.println("Insira um número para calcular seu fatorial: ");
 		num = ler.nextInt();
 		
+		System.out.println("Fatorial de: "+num);
 		System.out.print(num+"! = ");
 	
 		for (int i=num; i>=1; i--) {
 			res *= i;
 			System.out.print(i);
 			if(i>1) {
-				System.out.print(".");
+				System.out.print(" . ");
 			}
 		}
 			
