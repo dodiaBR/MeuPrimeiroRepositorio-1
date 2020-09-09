@@ -1,0 +1,74 @@
+*{ /* '*' manipula todos os elementos existentes do documento*/
+	margin: 0;  /* reseta configuracoes pré definidas dos navegadores*/
+	padding: 0; /* reseta configuracoes pré definidas dos navegadores*/
+}
+body{
+	background-color: black;
+}
+
+.logo {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+.nome {
+	margin-top: 50px;
+	margin-left: 150px;
+	margin-bottom: 50px;
+	width: 100px;
+}
+
+div.titulo {
+	color: rgb(250,200,0);
+	margin: 50px 50px 10px 50px;
+}
+
+.imagemcapa img{
+	display: inline-block;
+	margin-left: 50px;
+	margin-bottom: 50px;	
+	max-width: auto;
+	
+}
+
+p {
+	font-size: 20px;
+	color: white;
+	width: 800px;	
+	text-align: justify;
+	margin-left: 50px;
+	
+}
+
+div.menu {
+
+	width: 900px;  
+	background-color: black;
+	margin: 10px auto;
+	text-align: center;
+}
+
+div.menu a{
+	color: white;
+	font-size: 22px;
+	margin:0 10px;
+}
+
+div.elenco img{
+	margin: 20px 30px;
+}
+
+div.elenco a{
+	width: 900px;  
+	background-color: black;
+	margin: 10px auto;
+	text-align: left;
+}
+
+div.elenco a{
+	color: white;
+	font-size: 22px;
+	margin:0 10px;
+	text-decoration: none;
+}
